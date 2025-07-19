@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator Project | Young Jesse</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="ProjectDetails.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Jesse.dev</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../About.html">About</a></li>
+                <li><a href="../Skills.html">Skills</a></li>
+                <li><a href="../Projects.html">Projects</a></li>
+                <li><a href="../Games.html">Games</a></li>
+                <li><a href="../Contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1 class="project-title">GPA Calculator</h1>
+                <p class="project-subtitle">Calculate your GPA easily by entering grades and units for each course</p>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-gallery">
+                <h3><i class="fas fa-images"></i> Project Screenshots</h3>
+                <div class="gallery-container">
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/gpaCalculator1.png" alt="GPA Calculator Image 1">
+                    </div>
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/gpaCalculator2.png" alt="GPA Calculator Image 2">
+                    </div>
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/gpaCalculator3.png" alt="GPA Calculator Image 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-info">
+                    <h3><i class="fas fa-info-circle"></i> Project Overview</h3>
+                    <p class="project-description">
+                        This is a simple GPA Calculator built with HTML, CSS, and JavaScript. Users enter the number of courses they are taking in a semester. The app then dynamically generates pairs of input boxes for each course, one for the course grade and one for the course unit. After entering all grades and units, the calculator computes the GPA for the semester and displays the result.
+                    </p>
+                    <p class="project-description">
+                        Back in university, I found it difficult to calculate my GPA, so I created this tool. It made it easy for me to predict what I would get and helped reduce anxiety. This project reminds me to always use programming to solve real-world problems.
+                    </p>
+                </div>
+
+                <div class="project-info">
+                    <h3><i class="fas fa-star"></i> Key Features</h3>
+                    <ul class="project-features">
+                        <li>Enter number of courses for the semester</li>
+                        <li>Dynamically generates input boxes in pairs (grade and unit)</li>
+                        <li>Calculates GPA based on grades and units</li>
+                        <li>Displays GPA result instantly</li>
+                        <li>Responsive design for all devices</li>
+                        <li>Beginner-friendly and easy to use</li>
+                        <li>Clean, minimal user interface</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/Otormin/Hangman" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub Repository
+                        </a>
+
+                        <a href="https://gpacalculator-2a3i.onrender.com" class="project-link secondary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox-overlay">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Popup Image" />
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Otormin" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://wwww.linkedin.com/in/jesse-young-62b01124b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:yjesse330@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Young Jesse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const galleryImages = document.querySelectorAll('.gallery-main img');
+        const lightbox = document.getElementById('lightbox-overlay');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryImages.forEach((img) => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === lightboxClose) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script src="../Index.js"></script>
+</body>
+</html>

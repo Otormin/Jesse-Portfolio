@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game | Young Jesse</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="GameDetails.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Jesse.dev</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../About.html">About</a></li>
+                <li><a href="../Skills.html">Skills</a></li>
+                <li><a href="../Projects.html">Projects</a></li>
+                <li><a href="../Games.html">Games</a></li>
+                <li><a href="../Contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1 class="project-title">Tic-Tac-Toe</h1>
+                <p class="project-subtitle">A classic tic-tac-toe game built with HTML, CSS, and JavaScript.</p>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-gallery">
+                <h3><i class="fas fa-images"></i> Game Screenshots</h3>
+                <div class="gallery-container">
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/tictactoe1.png" alt="Tic-Tac-Toe Image 1">
+                    </div>
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/tictactoe2.png" alt="Tic-Tac-Toe Image 2">
+                    </div>
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/tictactoe3.png" alt="Tic-Tac-Toe Image 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-info">
+                    <h3><i class="fas fa-info-circle"></i> Project Overview</h3>
+                    <p class="project-description">
+                        This is a simple browser-based Tic Tac Toe game built with HTML, CSS, and JavaScript. Players enter their names and choose their characters (X or O) before starting the game. The player names and characters are saved in local storage. The game displays whose turn it is, updates the board in real-time, and shows the result when someone wins, it's a draw, or it's a tie.
+                    </p>
+                </div>
+
+                <div class="project-info">
+                    <h3><i class="fas fa-star"></i> Key Features</h3>
+                    <ul class="project-features">
+                        <li>Classic Tic Tac Toe gameplay</li>
+                        <li>Two players enter their names</li>
+                        <li>Players choose X or O</li>
+                        <li>Stores names and characters in local storage</li>
+                        <li>Displays whose turn it is</li>
+                        <li>Shows win, draw, or tie result</li>
+                        <li>Responsive design for all devices</li>
+                        <li>Simple, clean user interface</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/Otormin/Tic-Tac-Toe" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub Repository
+                        </a>
+
+                        <a href="https://tic-tac-toe-o8vw.onrender.com" class="project-link secondary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox-overlay">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Popup Image" />
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Otormin" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://wwww.linkedin.com/in/jesse-young-62b01124b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:yjesse330@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Young Jesse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const galleryImages = document.querySelectorAll('.gallery-main img');
+        const lightbox = document.getElementById('lightbox-overlay');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryImages.forEach((img) => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === lightboxClose) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script src="../Index.js"></script>
+</body>
+</html>

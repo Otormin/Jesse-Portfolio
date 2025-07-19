@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz API Project | Young Jesse</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="ProjectDetails.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Jesse.dev</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../About.html">About</a></li>
+                <li><a href="../Skills.html">Skills</a></li>
+                <li><a href="../Projects.html">Projects</a></li>
+                <li><a href="../Games.html">Games</a></li>
+                <li><a href="../Contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1 class="project-title">Quiz API</h1>
+                <p class="project-subtitle">A robust Quiz API for teachers and students with secure Multiple-Choice Question management</p>
+                <div class="project-tags">
+                    <span class="tag">ASP.NET</span>
+                    <span class="tag">JWT</span>
+                    <span class="tag">SQL Server</span>
+                    <span class="tag">Swagger</span>
+                    <span class="tag">SendGridAPI</span>
+                    <span class="tag">Hangfire</span>
+                    <span class="tag">NLog</span>
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-gallery">
+                <h3><i class="fas fa-images"></i> Project Screenshots</h3>
+                <div class="gallery-container">
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/quizwebAPI1.png" alt="CyberPay Image 1">
+                    </div>
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/quizwebAPI2.png" alt="CyberPay Image 2">
+                    </div>
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/quizwebAPI3.png" alt="CyberPay Image 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-info">
+                    <h3><i class="fas fa-info-circle"></i> Project Overview</h3>
+                    <p class="project-description">
+                        This is a full-featured Quiz API built with ASP.NET and secured using JWT. Both teachers and students can register and log in. Teachers login using their Staff ID and password, while students login using their Matriculation number and password. The API provides endpoints for managing courses, departments, and multiple-choice questions. Teachers can create, edit, and delete courses, departments, and questions. Students can answer questions, and once an answer is submitted it cannot be changed to prevent cheating. The API also allows teachers to view and manage student scores securely. Swagger is used for API testing, SendGrid handles email notifications, Hangfire manages background tasks, and NLog logs all activities.
+                    </p>
+
+                </div>
+
+                <div class="project-info">
+                    <h3><i class="fas fa-star"></i> Key Features</h3>
+                    <ul class="project-features">
+                        <li>Built with ASP.NET, JWT, SQL Server, Swagger, SendGrid, Hangfire, and NLog</li>
+                        <li>Teachers and students can register and log in</li>
+                        <li>Teachers login using their Staff ID and password</li>
+                        <li>Students login using their Matriculation Number and password</li>
+                        <li>Get the current logged-in user</li>
+                        <li>Get all courses, get by ID or course code</li>
+                        <li>Get departments and related questions</li>
+                        <li>Teachers can create, edit, and delete courses</li>
+                        <li>Teachers can create, update, and delete departments</li>
+                        <li>Teachers can post, update, and delete multiple-choice questions</li>
+                        <li>Teachers can view and delete student scores by ID or matriculation number</li>
+                        <li>Students can answer questions (answers are final and cannot change)</li>
+                        <li>Multiple-choice questions with options A, B, C, and D</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/Otormin/QuizAPI" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox-overlay">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Popup Image" />
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Otormin" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://wwww.linkedin.com/in/jesse-young-62b01124b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:yjesse330@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Young Jesse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const galleryImages = document.querySelectorAll('.gallery-main img');
+        const lightbox = document.getElementById('lightbox-overlay');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryImages.forEach((img) => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === lightboxClose) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script src="../Index.js"></script>
+</body>
+</html>

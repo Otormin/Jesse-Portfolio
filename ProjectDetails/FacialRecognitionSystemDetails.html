@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Recognition System Project | Young Jesse</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="ProjectDetails.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Jesse.dev</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../About.html">About</a></li>
+                <li><a href="../Skills.html">Skills</a></li>
+                <li><a href="../Projects.html">Projects</a></li>
+                <li><a href="../Games.html">Games</a></li>
+                <li><a href="../Contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1 class="project-title">Facial Recognition System for Online Examination Authentication</h1>
+                <p class="project-subtitle">A facial recognition system to authenticate students for online examinations</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">TensorFlow</span>
+                    <span class="tag">Tkinter</span>
+                    <span class="tag">Keras</span>
+                    <span class="tag">CNN (Convolutional Neural Network)</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Kaggle (Dataset)</span>
+                    <span class="tag">NumPy</span>
+                    <span class="tag">LabelEncoder (Scikit-learn)</span>
+                    <span class="tag">Pickle (Serialization)</span>
+                    <span class="tag">Triplet Loss (Deep Metric Learning)</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Project Content -->
+            <div class="project-gallery">
+                <h3><i class="fas fa-images"></i> Project Screenshots</h3>
+                <div class="gallery-container">
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/weatherApp1.png" alt="Facial Recognition System Image 1">
+                    </div>
+                    <div class="gallery-main">
+                        <img src="../Images/ProjectDetailImages/weatherApp2.png" alt="Facial Recognition System Image 2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-info">
+                    <h3><i class="fas fa-info-circle"></i> Project Overview</h3>
+                    <p class="project-description">
+                        During my time at university, I noticed that our online examination system relied only on email and password, which made it easy for someone else to impersonate a student. To solve this real-world security problem, I built this facial recognition system using Python, TensorFlow, Tkinter and OpenCV. The system's front end was built using Tkinter which is a lightweight  python GUI library because of it lets me quickly build desktop interfaces without needing seperate web frameworks . When a student registers, the system captures multiple photos and stores the best one in a database along with their details like name, matriculation number, and course information. During login, the system matches the live camera feed with the stored image using a CNN(Convolutional Neural Network) model trained on over 13,000 images. If the face matches, the student is granted access; if not, an alert email with the attempted matriculation number and impostor image is sent to the admin for investigation. This project shows how I apply machine learning to strengthen security for real-life use cases.
+                    </p>
+                </div>
+
+                <div class="project-info">
+                    <h3><i class="fas fa-star"></i> Key Features</h3>
+                    <h3><i class="fas fa-star"></i> Key Features</h3>
+                    <ul class="project-features">
+                        <li>Built with Python (TensorFlow, Keras, OpenCV)</li>
+                        <li>Frontend was built using Tkinter</li>
+                        <li>Uses a CNN (Convolutional Neural Network) trained with over 13,000 images</li>
+                        <li>Implements Triplet Loss for accurate face matching</li>
+                        <li>Uses LabelEncoder (Scikit-learn) and Pickle for label management</li>
+                        <li>Stores student data and images securely in MySQL</li>
+                        <li>Captures and compares student faces in real time during login</li>
+                        <li>Sends an alert email to the admin if an impostor attempt is detected</li>
+                        <li>Includes a quiz front-end built with HTML, CSS, and JavaScript</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/Otormin/Facial_Recognition_For_online_Examination_Using_CNN" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox-overlay">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Popup Image" />
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Otormin" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://wwww.linkedin.com/in/jesse-young-62b01124b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:yjesse330@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Young Jesse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const galleryImages = document.querySelectorAll('.gallery-main img');
+        const lightbox = document.getElementById('lightbox-overlay');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryImages.forEach((img) => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === lightboxClose) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script src="../Index.js"></script>
+</body>
+</html>
