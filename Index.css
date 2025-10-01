@@ -91,6 +91,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: -80px;
 }
 
 .hero-content {
@@ -535,6 +536,11 @@ footer {
 
     .mobile-menu {
         display: flex;
+    }
+
+    .hero {
+        margin-top: 80px;
+        margin-bottom: 0;
     }
 
     .hero-content h1 {
