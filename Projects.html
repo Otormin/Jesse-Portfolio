@@ -31,8 +31,16 @@
     <section id="projects" class="section projects">
         <div class="container">
             <h2>Featured Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Frontend">Frontend</button>
+                <button class="filter-btn" data-filter="Backend">Backend</button>
+                <button class="filter-btn" data-filter="Fullstack">Fullstack</button>
+                <button class="filter-btn" data-filter="Machine Learning / Data Science">Data Science / ML</button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-category="Backend">
                     <img src="Images/CyberPayAuthAPI.jpeg" alt="CyberPay Authentication API Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">CyberPay Authentication API</h3>
@@ -48,7 +56,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Backend">
                     <img src="Images/QuizAPI.png" alt="Quiz API Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">Quiz API</h3>
@@ -64,7 +72,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Fullstack">
                     <img src="Images/RunGroupWebApp.jpeg" alt="RunGroup Web App Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">RunGroup Web Application</h3>
@@ -80,7 +88,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Machine Learning / Data Science">
                     <img src="Images/FacialRecognitionSyetem.png" alt="Facial Recognition System Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">Facial Recognition System for Online Examination Authentication</h3>
@@ -96,7 +104,71 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Machine Learning / Data Science">
+                    <img src="Images/RetailSalesForecast.jpeg" alt="Retail Sales Forecast Image" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Retail Sales Forecasting Using Prophet & Power BI</h3>
+                        <p class="project-tech">Python, Facebook Prophet, Power BI, Jupyter Notebook</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Otormin/FUTURE_ML_01" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="ProjectDetails/RetailSalesForecastDetails.html" class="project-link">
+                                <i class="fas fa-info-circle"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="Machine Learning / Data Science">
+                    <img src="Images/CustomerChurn.png" alt="Customer Churn Prediction System Image" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Customer Churn Prediction System</h3>
+                        <p class="project-tech">Python, Scikit-learn, XGBoost, Jupyter Notebook</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Otormin/FUTURE_ML_02" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="ProjectDetails/CustomerChurnPredictionSystemDetails.html" class="project-link">
+                                <i class="fas fa-info-circle"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="Machine Learning / Data Science">
+                    <img src="Images/CustomerSupportChatbot.jpeg" alt="Moviez Image" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Restaurant Customer Support Chatbot</h3>
+                        <p class="project-tech">HTML, CSS, JavaScript, Dialogflow</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Otormin/FUTURE_ML_03" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="ProjectDetails/CustomerSupportChatbotDetails.html" class="project-link">
+                                <i class="fas fa-info-circle"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="Fullstack">
+                    <img src="Images/Moviez.jpeg" alt="Moviez Image" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Moviez - Movie search and discovery application</h3>
+                        <p class="project-tech">React, TailwindCSS, Appwrite, TMDB API</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Otormin/Moviez" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="ProjectDetails/MoviezDetails.html" class="project-link">
+                                <i class="fas fa-info-circle"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="Fullstack">
                     <img src="Images/FarmConnectWebApp.jpeg" alt="FarmConnect Web App Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">FarmConnect Web Application</h3>
@@ -112,7 +184,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Fullstack">
                     <img src="Images/JobEntryWebApp.jpeg" alt="JobEntry Web App Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">JobEntry Web Application</h3>
@@ -128,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Fullstack">
                     <img src="Images/ScholarDeskWebApp.jpeg" alt="ScholarDesk Web App Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">ScholarDesk Web Application</h3>
@@ -144,7 +216,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Machine Learning / Data Science">
                     <img src="Images/QueryTheChatBot.jpeg" alt="Query The ChatBot Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">Query the Chatbot</h3>
@@ -160,7 +232,28 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Frontend">
+                    <img src="Images/Edusity.jpeg" alt="Edusity Landing Page Image" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Edusity - University Landing Page</h3>
+                        <p class="project-tech">React (Vite), CSS, JavaScript (ES6+)</p>
+                        <!-- <p class="project-description">
+                            A fully responsive and interactive university landing page featuring smooth scrolling navigation, 
+                            animated hero section, program showcase, video modal, gallery lightbox, testimonials carousel, 
+                            and a functional contact form built with a modular React component architecture.
+                        </p> -->
+                        <div class="project-links">
+                            <a href="https://github.com/Otormin/Edusity" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="ProjectDetails/EdusityDetails.html" class="project-link">
+                                <i class="fas fa-info-circle"></i> Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="Frontend">
                     <img src="Images/ECommerceWebsite.jpeg" alt="ECommerce Website Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">Static ECommerce Website</h3>
@@ -176,7 +269,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Frontend">
                     <img src="Images/GPAcalculator.png" alt="GPA Calculator Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">GPA Calculator</h3>
@@ -192,7 +285,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Frontend">
                     <img src="Images/WeatherApplication.jpeg" alt="Weather Application Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">Weather Application</h3>
@@ -208,7 +301,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Frontend">
                     <img src="Images/CGPAcalculator.png" alt="CGPA Calculator Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">CGPA Calculator</h3>
@@ -224,7 +317,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Frontend">
                     <img src="Images/ToDoList.jpeg" alt="To-Do List Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">To-Do List</h3>
@@ -240,7 +333,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="Fullstack">
                     <img src="Images/AddToCart.jpeg" alt="Add to Cart Image" class="project-image">
                     <div class="project-content">
                         <h3 class="project-title">Add to Cart</h3>
@@ -271,6 +364,29 @@
     </footer>
 
     <script src="Index.js"></script>
+
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-filter');
+
+                projects.forEach(project => {
+                    if(category === 'all' || project.dataset.category === category){
+                        project.style.display = 'block';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
